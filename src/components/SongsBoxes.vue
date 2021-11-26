@@ -1,12 +1,11 @@
 <template>
-  <div class="row justify-content-center pt-5">
-    <div class="col-2 song-box me-4 mb-3 d-flex justify-content-start align-items-center flex-column">
-      <img class="pt-3" src="https://www.onstageweb.com/wp-content/uploads/2018/09/bon-jovi-new-jersey.jpg" alt="">
-      <h3 class="p-2 mb-0">New Jersey</h3>
-      <p class="mb-0">Bon Jovi</p>
-      <p class="pt-0 year">1988</p>
-    </div>       
-  </div>
+  <div class="col-2 song-box me-4 mb-3 d-flex justify-content-start align-items-center flex-column">
+    <img class="pt-3" src="https://www.onstageweb.com/wp-content/uploads/2018/09/bon-jovi-new-jersey.jpg" alt="">
+    <h3 class="p-2 mb-0">New Jersey</h3>
+    <p class="mb-0">Bon Jovi</p>
+    <p class="pt-0 year">1988</p>
+  </div> 
+  
   
 </template>
 
