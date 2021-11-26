@@ -1,9 +1,9 @@
 <template>
-  <div class="col-2 song-box me-4 mb-3 d-flex justify-content-start align-items-center flex-column">
-    <img class="pt-3" src="https://www.onstageweb.com/wp-content/uploads/2018/09/bon-jovi-new-jersey.jpg" alt="">
-    <h3 class="p-2 mb-0">New Jersey</h3>
-    <p class="mb-0">Bon Jovi</p>
-    <p class="pt-0 year">1988</p>
+  <div class="col-10 col-sm-4 col-md-3 col-lg-2 song-box me-4 mb-3 d-flex justify-content-start align-items-center flex-column">
+    <img class="pt-3" :src="song.poster" alt="">
+    <h5 class="p-2 mb-0 text-center">{{song.title}}</h5>
+    <p class="mb-0">{{song.author}}</p>
+    <p class="pt-0 year">{{song.year}} </p>
   </div> 
   
   
@@ -11,7 +11,10 @@
 
 <script>
 export default {
-  name: 'SongsBoxes'
+  name: 'SongsBoxes',
+  props:{
+    song: Object,
+  }
 }
 </script>
 
@@ -20,14 +23,24 @@ export default {
 
 .song-box{
   width: 100px;
-  height: 300px;
+  min-height: 300px;
   background-color: $primary-color;
   color: white;
+  &:hover{
+    background-color: lighten($primary-color, 10%);
+    cursor: pointer;
+    img{
+      scale: 105%;
+    }
+    p{
+      color: lighten(#808078, 30%);
+    }
+  }
   img{
-    width: 90%;
+    width: 80%;
     object-fit: contain;
   }
-  h3{
+  h5{
     text-transform: uppercase;
   }
   p{

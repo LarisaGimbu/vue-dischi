@@ -2,7 +2,10 @@
   <main>
     <div class="container">
       <div class="row justify-content-center pt-5">
-        <SongsBoxes />
+        <SongsBoxes 
+        v-for="(song, index) in songs"
+        :key="index"
+        :song="song" />
       </div>
       
     </div>
@@ -28,7 +31,6 @@ export default {
       axios.get('https://flynn.boolean.careers/exercises/api/array/music')
         .then( r =>{
           this.songs = r.data.response;
-          console.log(this.songs);
         })
         .catch((error) =>{
           console.log(error);
