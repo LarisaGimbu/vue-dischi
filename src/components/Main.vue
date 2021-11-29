@@ -57,7 +57,7 @@ export default {
   },
   computed:{
     filteredSongs(){
-      if(this.textToSearch === ''){
+      if(this.textToSearch === 'All'){
         return this.songs;
       }
       return this.songs.filter(song =>{

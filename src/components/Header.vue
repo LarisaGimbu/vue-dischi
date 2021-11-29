@@ -1,5 +1,5 @@
 <template>
-  <header class="d-flex justify-content-between align-items-center">
+  <header>
     <div class="logo">
       <i class="fab fa-spotify p-2"></i>
     </div>
